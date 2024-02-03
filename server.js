@@ -17,7 +17,11 @@ mongoose
 
 //MIDDLEWARES
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://momments.netlify.app/", "http://localhost:5000"],
+  })
+);
 
 //ROUTES
 app.post("/api/test", async (req, res) => {
