@@ -19,7 +19,7 @@ mongoose
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://momments.netlify.app/", "http://localhost:5000"],
+    origin: ["https://momments.netlify.app/", "http://localhost:3000"],
   })
 );
 
