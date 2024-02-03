@@ -9,16 +9,16 @@ module.exports = async (req, res) => {
     let admin = await Admin.findOne({ email });
     if (!admin) {
       return res.status(200).json({
-        status: true,
-        message: "Wrong email or password, please check again",
+        status: false,
+        error: "Wrong email or password, please check again",
       });
     }
     let checkPassword = await bcrypt.compare(password, admin.password);
 
     if (!checkPassword) {
       return res.status(200).json({
-        status: true,
-        message: "Wrong email or password, please check again",
+        status: false,
+        error: "Wrong email or password, please check again",
       });
     }
     let token = await jwt.sign(
