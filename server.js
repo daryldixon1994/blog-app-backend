@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 require("dotenv").config();
-const cors = require('cors')
+const cors = require("cors");
 
 //ENVIRONMENT VARIABLES
 const DB = process.env.DB;
