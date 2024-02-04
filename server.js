@@ -24,11 +24,11 @@ app.use(
 );
 
 //ROUTES
-app.post("/api/test", async (req, res) => {
-  console.log(req.files);
-  console.log(req.file);
-  res.json({ message: "ok" });
-});
+// app.post("/api/test", async (req, res) => {
+//   console.log(req.files);
+//   console.log(req.file);
+//   res.json({ message: "ok" });
+// });
 // user routes
 app.use("/blog/api", require("./routes/user"));
 // admin routes
